@@ -254,7 +254,7 @@ public struct MLXLanguageModel: FoundationModels.LanguageModel, Sendable {
     /// Capabilities are declared explicitly by the caller at ``init(configuration:capabilities:configurationResolver:weightsLocation:load:)``
     /// and stored verbatim. The caller includes
     /// `.guidedGeneration`/`.toolCalling`/`.reasoning` as appropriate; the
-    /// adapter does not consult ``ReasoningHeuristics`` (which remains a
+    /// adapter does not consult `ReasoningHeuristics` (which remains a
     /// standalone helper a caller may use to compute their own capability set).
     ///
     /// Declaring `.reasoning` matters for request routing: the framework only
@@ -264,7 +264,7 @@ public struct MLXLanguageModel: FoundationModels.LanguageModel, Sendable {
     /// capability was declared.
     public let capabilities: LanguageModelCapabilities
 
-    /// The configuration resolver that patches a per-call ``ModelConfiguration``
+    /// The configuration resolver that patches a per-call `ModelConfiguration`
     /// for this instance. Defaults to ``DefaultConfigurationResolver`` when
     /// omitted.
     public let configurationResolver: any ModelConfigurationResolver
@@ -285,7 +285,7 @@ public struct MLXLanguageModel: FoundationModels.LanguageModel, Sendable {
     ///   - capabilities: The capabilities this model supports
     ///     (`.guidedGeneration`, `.toolCalling`, `.reasoning`, `.vision`).
     ///     Stored verbatim; the adapter never infers or expands the set.
-    ///   - configurationResolver: Patches a per-call ``ModelConfiguration``
+    ///   - configurationResolver: Patches a per-call `ModelConfiguration`
     ///     (reasoning config, extra stop tokens) for this instance.
     ///   - weightsLocation: Resolves a model identifier to its on-disk weights
     ///     directory, for the availability checks.
